@@ -208,7 +208,8 @@ export async function executeQuery(context: vscode.ExtensionContext, resultsProv
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        }
+        },
+        rejectUnauthorized: false
     }, (error, response, body) => {
 
         sbi.dispose();
